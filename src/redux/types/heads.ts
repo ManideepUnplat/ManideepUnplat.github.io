@@ -1,0 +1,4 @@
+export const ACTION = {
+    EDIT_HEAD: 'HEADS/EDIT_HEAD',
+    DELETE_HEAD: 'HEADS/DELETE_HEAD'
+};
