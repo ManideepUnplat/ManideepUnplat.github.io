@@ -6,7 +6,7 @@
   "scripts": {
     "css": "postcss --watch styles/tailwind.css -o styles/output.css",
     "dev": "webpack serve --open --live-reload --hot --config webpack.dev.js && react-scripts start",
-    "build": "postcss styles/tailwind.css -o styles/output.css && webpack --config webpack.prod.js --watch",
+    "build": "rimraf dist && postcss styles/tailwind.css -o styles/output.css && webpack --config webpack.prod.js --watch",
     "test": "jest --env=jsdom",
     "start": "react-scripts start"
   },
