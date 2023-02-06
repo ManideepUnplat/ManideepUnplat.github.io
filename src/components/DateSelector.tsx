@@ -15,30 +15,30 @@ const GenerateCalendar: React.FC<{
 
   return (
     <div className="grid grid-cols-7 justify-items-center">
-      <div className="h-12 w-12 text-[#5655C6] font-bold flex justify-center items-center">
+      <div className="h-6 w-6 text-[#5655C6] font-bold flex justify-center items-center">
         S
       </div>
-      <div className="h-12 w-12 text-[#5655C6] font-bold flex justify-center items-center">
+      <div className="h-6 w-6 text-[#5655C6] font-bold flex justify-center items-center">
         M
       </div>
-      <div className="h-12 w-12 text-[#5655C6] font-bold flex justify-center items-center">
+      <div className="h-6 w-6 text-[#5655C6] font-bold flex justify-center items-center">
         T
       </div>
-      <div className="h-12 w-12 text-[#5655C6] font-bold flex justify-center items-center">
+      <div className="h-6 w-6 text-[#5655C6] font-bold flex justify-center items-center">
         W
       </div>
-      <div className="h-12 w-12 text-[#5655C6] font-bold flex justify-center items-center">
+      <div className="h-6 w-6 text-[#5655C6] font-bold flex justify-center items-center">
         T
       </div>
-      <div className="h-12 w-12 text-[#5655C6] font-bold flex justify-center items-center">
+      <div className="h-6 w-6 text-[#5655C6] font-bold flex justify-center items-center">
         F
       </div>
-      <div className="h-12 w-12 text-[#5655C6] font-bold flex justify-center items-center">
+      <div className="h-6 w-6 text-[#5655C6] font-bold flex justify-center items-center">
         S
       </div>
       {[...Array(start.day()).keys()].reverse().map((dateOffset) => {
         return (
-          <button className="h-12 w-12 text-neutral-300 pointer-events-none">
+          <button className="h-6 w-6 text-neutral-300 pointer-events-none">
             {start.subtract(dateOffset + 1, 'day').date()}
           </button>
         );
@@ -46,7 +46,7 @@ const GenerateCalendar: React.FC<{
       {[...Array(dateCount).keys()].map((date) => {
         return (
           <button
-            className={`h-12 w-12 rounded-full text-[#5655C6] ${
+            className={`h-6 w-6 rounded-full text-[#5655C6] ${
               start.add(date, 'day').format('DD-MM-YY') ===
               selectedDate.format('DD-MM-YY')
                 ? 'bg-[#5655C6] text-white'
@@ -60,7 +60,7 @@ const GenerateCalendar: React.FC<{
       })}
       {[...Array(6 - end.day()).keys()].map((dateOffset) => {
         return (
-          <button className="h-12 w-12 text-neutral-300 pointer-events-none">
+          <button className="h-6 w-6 text-neutral-300 pointer-events-none">
             {end.add(dateOffset + 1, 'day').date()}
           </button>
         );
@@ -78,9 +78,9 @@ const DateSelector: React.FC<{
   );
 
   return (
-    <div className="p-3 w-[360px] bg-white flex flex-col gap-3 rounded-lg shadow-[0_6px_12px_rgba(0,0,0,0.25)]">
+    <div className="text-sm p-3 w-[220px] bg-white flex flex-col gap-3 rounded-lg shadow-[0_6px_12px_rgba(0,0,0,0.25)]">
       <div className="flex justify-between items-center">
-        <h2 className="ml-4 font-bold text-[#5655C5]">
+        <h2 className="ml-3 font-bold text-[#5655C5]">
           {monthStartDate.format('MMMM YYYY')}
         </h2>
         <div className="flex gap-2">
