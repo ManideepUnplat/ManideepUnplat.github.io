@@ -7,6 +7,7 @@
     "css": "postcss --watch styles/tailwind.css -o styles/output.css",
     "dev": "webpack serve --open --live-reload --hot --config webpack.dev.js && react-scripts start",
     "build": "rimraf dist && postcss styles/tailwind.css -o styles/output.css && webpack --config webpack.prod.js --watch",
+    "deploy": "rimraf dist && postcss styles/tailwind.css -o styles/output.css && webpack --config webpack.prod.js && git add . && git commit -m 'commit' && git push",
     "test": "jest --env=jsdom",
     "start": "react-scripts start"
   },
