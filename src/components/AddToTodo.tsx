@@ -10,17 +10,17 @@ function AddToTodo() {
 
   return (
     <div className='text-[#000000]'>
-      <p className='text-xl block font-bold mt-6'>ADD TO TODO</p>
+      <p className='block font-bold mt-6 text-md'>ADD TO TODO</p>
       <div className="border border-[black]"></div>
-      <p className='py-1 font-bold py-3'>Task Name</p>
-      <p>Your NYT Summary for the day</p>
+      <p className='py-1 font-bold py-3 text-xs'>Task Name</p>
+      <p className='text-xs'>Your NYT Summary for the day</p>
 
       <div className='border'></div>
 
-      <div className="flex py-6 justify-between">
-        <p>Due date</p>
+      <div className="flex py-5 items-center justify-between">
+        <p className='text-xs'>Due date</p>
         <div className='relative'>
-          <div onClick={()=>setIsOpen(!isOpen)} className='w-[360px] border rounded p-2 flex flex-grow justify-end'>
+          <div onClick={()=>setIsOpen(!isOpen)} className='w-[220px] border rounded p-2 flex flex-grow justify-end'>
             <Calendar/>
           </div>
           {
@@ -34,16 +34,16 @@ function AddToTodo() {
 
       <div className="flex justify-between">
         <div>
-          <p className='py-2'>Project</p>
-          <select className='w-[200px] border' name="project" id='project'>
+          <p className='py-1 text-xs'>Project</p>
+          <select className='w-[136px] border' name="project" id='project'>
             <option value="one">one</option>
             <option value="two">two</option>
           </select>
         </div>
 
         <div>
-          <p className='py-2'>Priority</p>
-          <select className='w-[200px] border' name="priority" id='priority'>
+          <p className='py-1 text-xs'>Priority</p>
+          <select className='w-[136px] border' name="priority" id='priority'>
             <option value="one">one</option>
             <option value="two">two</option>
           </select>
@@ -51,7 +51,7 @@ function AddToTodo() {
       </div>
 
       <div className='flex items-center justify-center mt-8'>
-        <Button twAddonStyles={{button : 'mx-auto' }} isPrimary label={'Add Task'} size={'md'}/>
+        <Button twAddonStyles={{button : 'mx-auto' }} isPrimary label={'Add Task'} size={'sm'}/>
       </div>
 
     </div>

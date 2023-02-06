@@ -675,11 +675,11 @@ video {
 .min-h-\[60px\]{
   min-height: 60px;
 }
-.w-\[360px\]{
-  width: 360px;
+.w-\[274\.3px\]{
+  width: 274.3px;
 }
-.w-\[200px\]{
-  width: 200px;
+.w-\[152\.4px\]{
+  width: 152.4px;
 }
 .w-\[236px\]{
   width: 236px;
@@ -690,11 +690,17 @@ video {
 .w-12{
   width: 3rem;
 }
+.w-\[360px\]{
+  width: 360px;
+}
 .w-\[314px\]{
   width: 314px;
 }
-.w-\[470px\]{
-  width: 470px;
+.w-\[200px\]{
+  width: 200px;
+}
+.w-\[320px\]{
+  width: 320px;
 }
 .w-\[195px\]{
   width: 195px;
@@ -731,6 +737,30 @@ video {
 }
 .w-\[70px\]{
   width: 70px;
+}
+.w-\[470px\]{
+  width: 470px;
+}
+.w-\[px\]{
+  width: px;
+}
+.w-\[136px\]{
+  width: 136px;
+}
+.w-\[245px\]{
+  width: 245px;
+}
+.w-\[220px\]{
+  width: 220px;
+}
+.w-\[160px\]{
+  width: 160px;
+}
+.w-\[53px\]{
+  width: 53px;
+}
+.w-\[213px\]{
+  width: 213px;
 }
 .min-w-\[120px\]{
   min-width: 120px;
@@ -1061,6 +1091,10 @@ video {
   padding-left: 130px;
   padding-right: 130px;
 }
+.py-5{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
 .pl-6{
   padding-left: 1.5rem;
 }
@@ -1261,40 +1295,50 @@ video {
 .scroll-dark::-webkit-scrollbar-thumb:active {
     background-color: #eeeeee;
   }
+
 .hover\:border-\[\#5655C6\]:hover{
   --tw-border-opacity: 1;
   border-color: rgb(86 85 198 / var(--tw-border-opacity));
 }
+
 .hover\:bg-\[\#5655C626\]:hover{
   background-color: #5655C626;
 }
+
 .hover\:bg-\[\#E6E6f7\]:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(230 230 247 / var(--tw-bg-opacity));
 }
+
 .hover\:text-\[\#5655C6\]:hover{
   --tw-text-opacity: 1;
   color: rgb(86 85 198 / var(--tw-text-opacity));
 }
+
 .active\:bg-transparent:active{
   background-color: transparent;
 }
+
 .active\:text-\[\#5655C6\]:active{
   --tw-text-opacity: 1;
   color: rgb(86 85 198 / var(--tw-text-opacity));
 }
+
 @media (min-width: 640px){
 
   .sm\:p-8{
     padding: 2rem;
   }
 }
+
 .\[\&\>svg\]\:stroke-white>svg{
   stroke: #fff;
 }
+
 .\[\&\>svg\]\:stroke-\[\#5655C6\]>svg{
   stroke: #5655C6;
 }
+
 .hover\:\[\&\>svg\]\:stroke-\[\#5655C6\]>svg:hover{
   stroke: #5655C6;
 }
