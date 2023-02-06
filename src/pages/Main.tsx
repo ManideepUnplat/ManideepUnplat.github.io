@@ -10,7 +10,7 @@ function App() {
   return (
     <div className='w-[315px]'>
       <Head/>
-      <div className='p-3'>
+      <div className='p-1'>
         <AddToTodo/>
         <CurrentEmail/>
         <EmailAnalytics/>
