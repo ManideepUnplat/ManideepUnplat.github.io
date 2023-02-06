@@ -6,7 +6,7 @@ import Button from './common/Button'
 function AddToTodo() {
 
   const [date,setDate] = useState(new Date().toISOString())
-  const [isOpen,setIsOpen] = useState(true)
+  const [isOpen,setIsOpen] = useState(false)
 
   return (
     <div className='text-[#000000]'>
