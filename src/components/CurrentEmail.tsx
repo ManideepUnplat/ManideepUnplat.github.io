@@ -1,6 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import "office-js";
 
 function CurrentEmail() {
+
+  const [time,setTime] = useState("")
+  const [words,setWords] = useState(0)
+
+  useEffect(()=>{
+    Office.onReady((info: any) => {
+      if (info.host === Office.HostType.Outlook) {
+
+        setInterval(function () {
+          
+          if(Office.context.mailbox.item){
+            Office.context.mailbox.item.body.getAsync("text", function (result : any) {
+              if(result.value.trim().split(/\s+/)[0]=='')setWords(0)
+              else setWords(result.value.trim().split(/\s+/).length)
+            });
+          }
+
+        }, 500);
+      }
+    });
+  },[])
+
   return (
     <div className='mt-12'>
       <p className='text-md font-bold'>CURRENT EMAIL</p>
@@ -21,7 +44,7 @@ function CurrentEmail() {
 
       <div className="flex py-2">
         <p className='w-[155px] font-bold text-xs'>Email word count:</p>
-        <p className='w-[48px] font-bold text-center text-xs'>260</p>
+        <p className='w-[48px] font-bold text-center text-xs'>{words}</p>
         <p className='w-[48px] text-center text-[#CFCFCF] text-xs'>280</p>
         <p className='w-[48px] text-center text-[#CFCFCF] text-xs'>280</p>
       </div>
