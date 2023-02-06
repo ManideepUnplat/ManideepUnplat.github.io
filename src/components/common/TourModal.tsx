@@ -65,9 +65,9 @@ const TourModal = (props: { isOpen: boolean }): React.ReactPortal => {
                   <path
                     d="M75.5 22.25L18.875 74.1667H50.2704L50.3333 155.75H100.667V74.1667H132.125L75.5 22.25Z"
                     stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </div>

@@ -1,36 +1,33 @@
 import fetchHandler, { FetchOptions } from '../../common-utils/fetchHandler';
-import { HeadTypes } from '../types';
+import { TodoTypes } from '../types';
 
 // Base URLs of the microservices being used (Set/Update this URL in ".env" file)...
 const baseUrl = process.env.MSV_YOURTABS;
 // const baseUrl="http://localhost:3000"
 
-export const editHead = ( 
-  payload: {
-    headId: number,
-    headName: string
-  },
+export const getProjects = ( 
+  uid: number | string,
   successHandler?: (response: any) => void,
   errorHandler?: (response: any) => void
   ) => {
   const fetchOptions : FetchOptions = {
-    url: `${baseUrl}/heads/updateHeads`,
-    method: 'POST',
-    body: JSON.stringify(payload),
-    actionType: HeadTypes.ACTION.EDIT_HEAD
+    url: `${baseUrl}/project/get-all-projects/${uid}`,
+    method: 'GET',
+    actionType: TodoTypes.ACTION.GET_PROJECTS
   };
   return fetchHandler(fetchOptions, successHandler, errorHandler);
 };
 
-export const deleteHead = (
-  headId : any,
+export const postProject = ( 
+  payload: any,
   successHandler?: (response: any) => void,
   errorHandler?: (response: any) => void
   ) => {
   const fetchOptions : FetchOptions = {
-    url: `${baseUrl}/heads/deleteHead/${headId}`,
-    method: 'DELETE',
-    actionType: HeadTypes.ACTION.DELETE_HEAD
+    url: `${baseUrl}/todos/add-todo`,
+    method: 'POST',
+    body: JSON.stringify(payload),
+    actionType: TodoTypes.ACTION.POST_PROJECTS
   };
   return fetchHandler(fetchOptions, successHandler, errorHandler);
 };

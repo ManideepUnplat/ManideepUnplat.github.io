@@ -671,6 +671,9 @@ video {
 .min-h-\[60px\]{
   min-height: 60px;
 }
+.w-full{
+  width: 100%;
+}
 .w-\[220px\]{
   width: 220px;
 }
@@ -703,9 +706,6 @@ video {
 }
 .w-10{
   width: 2.5rem;
-}
-.w-full{
-  width: 100%;
 }
 .w-2{
   width: 0.5rem;
@@ -1275,6 +1275,10 @@ video {
 .hover\:text-\[\#5655C6\]:hover{
   --tw-text-opacity: 1;
   color: rgb(86 85 198 / var(--tw-text-opacity));
+}
+.focus\:outline-none:focus{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 .active\:bg-transparent:active{
   background-color: transparent;

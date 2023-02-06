@@ -1,2 +1,1 @@
-export * as YourTabsActions from './yourTabs'
-export * as HeadActions from './heads'
+export * as TodoActions from './todo'

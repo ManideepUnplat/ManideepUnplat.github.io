@@ -1,16 +1,17 @@
 import { createReducer, PayloadAction } from '@reduxjs/toolkit';
-import { HeadTypes } from '../types';
+import { TodoTypes } from '../types';
 
 const initialState: any = {};
 
 export default createReducer(initialState, (builder) => {
   
   builder.addCase(
-    HeadTypes.ACTION.EDIT_HEAD,
+    TodoTypes.ACTION.GET_PROJECTS,
     (state, action: PayloadAction<any>) => {
       if (action.payload.data)
         return {
-          ...state
+          ...state,
+          todos: action.payload.data
         };
       return {
         ...state,
@@ -18,9 +19,9 @@ export default createReducer(initialState, (builder) => {
       };
     }
   );
-
+  
   builder.addCase(
-    HeadTypes.ACTION.DELETE_HEAD,
+    TodoTypes.ACTION.POST_PROJECTS,
     (state, action: PayloadAction<any>) => {
       if (action.payload.data)
         return {

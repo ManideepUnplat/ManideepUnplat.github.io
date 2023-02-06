@@ -1,7 +1,5 @@
-import yourTabs from './yourTabs';
-import heads from './heads';
+import todo from './todo';
 
 export default {
-  yourTabs,
-  heads
+  todo
 };
