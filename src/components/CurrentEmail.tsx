@@ -8,7 +8,6 @@ function CurrentEmail() {
 
   useEffect(()=>{
     Office.onReady((info: any) => {
-      console.log(new Date());
       if (info.host === Office.HostType.Outlook) {
 
         setInterval(function () {
