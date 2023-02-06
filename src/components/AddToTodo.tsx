@@ -35,7 +35,7 @@ function AddToTodo() {
       <div className="flex justify-between">
         <div>
           <p className='py-1 text-xs'>Project</p>
-          <select className='w-[136px] border' name="project" id='project'>
+          <select className='w-[130px] border' name="project" id='project'>
             <option value="one">one</option>
             <option value="two">two</option>
           </select>
@@ -43,7 +43,7 @@ function AddToTodo() {
 
         <div>
           <p className='py-1 text-xs'>Priority</p>
-          <select className='w-[136px] border' name="priority" id='priority'>
+          <select className='w-[130px] border' name="priority" id='priority'>
             <option value="one">one</option>
             <option value="two">two</option>
           </select>

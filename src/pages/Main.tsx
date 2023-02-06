@@ -8,7 +8,7 @@ import PerformanceTools from '../components/PerformanceTools';
 function App() {
 
   return (
-    <div className='w-[320px]'>
+    <div className='w-[315px]'>
       <Head/>
       <div className='p-3'>
         <AddToTodo/>
