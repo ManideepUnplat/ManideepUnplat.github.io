@@ -13,6 +13,9 @@
         );
       };
 
-      function handleItemChanged(){
-        console.log("changed",new Date())
+      function handleItemChanged(eventArgs) {
+        if (eventArgs.type === Office.EventType.ItemChanged &&
+            eventArgs.eventId === Office.EventId.ItemLoad) {
+            console.log("date",new Date())
+        }
       }</script></body></html>
