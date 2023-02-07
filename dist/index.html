@@ -5,6 +5,7 @@
         Office.context.mailbox.addHandlerAsync(
           Office.EventType.ItemChanged,
           function (eventArgs) {
+            console.log(eventArgs)
             if (eventArgs.type === Office.EventType.ItemChanged &&
                 eventArgs.eventId === Office.EventId.ItemLoad) {
                 console.log("date",new Date())
