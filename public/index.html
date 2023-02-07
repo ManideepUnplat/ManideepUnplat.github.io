@@ -19,13 +19,18 @@
         var mailbox = Office.context.mailbox;
         mailbox.item.addHandlerAsync(
           Office.EventType.ItemChanged,
-          function (eventArgs) {
-            if (eventArgs.type === Office.EventType.ItemChanged && eventArgs.eventId === Office.EventId.ItemLoad) {
-              console.log("index.html",new Date())
+          handleItemChanged,
+          function (result) {
+            if (result.status === Office.AsyncResultStatus.Failed) {
+              console.error(result.error.message);
             }
           }
         );
       };
+
+      function handleItemChanged(){
+        console.log("changed",new Date())
+      }
 
     </script>
 
