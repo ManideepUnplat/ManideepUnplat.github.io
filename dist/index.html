@@ -3,8 +3,10 @@
       Office.initialize = function () {
 
         console.log("function started!")
+
+        var mailbox=Office.context.mailbox
         
-        Office.context.mailbox.addHandlerAsync(
+        mailbox.addHandlerAsync(
           Office.EventType.ItemChanged,
           function (eventArgs) {
             console.log(eventArgs)
