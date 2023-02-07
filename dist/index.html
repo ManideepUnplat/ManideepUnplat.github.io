@@ -6,7 +6,7 @@
           Office.EventType.ItemChanged,
           handleItemChanged,
           function (result) {
-            if (result.status === Office.AsyncResultStatus.Failed) {
+            if (result.status === "Failed") {
               console.error(result.error.message);
             }
           }
