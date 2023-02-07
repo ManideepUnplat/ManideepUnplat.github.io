@@ -76,6 +76,8 @@
               <LaunchEvent Type="OnNewMessageCompose" FunctionName="onMessageComposeHandler"/>
               <LaunchEvent Type="OnNewAppointmentOrganizer" FunctionName="onAppointmentComposeHandler"/>
             </LaunchEvents>
+            
+            <SourceLocation resid=""/>
           </ExtensionPoint>
 
         </DesktopFormFactor>
