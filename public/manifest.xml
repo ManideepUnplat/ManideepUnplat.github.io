@@ -37,7 +37,6 @@
     <Rule xsi:type="ItemIs" ItemType="Message" FormType="Edit"/>
   </Rule>
   <DisableEntityHighlighting>false</DisableEntityHighlighting>
-  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
     <Requirements>
       <bt:Sets DefaultMinVersion="1.3">
@@ -72,13 +71,14 @@
             </OfficeTab>
           </ExtensionPoint>
 
-          <ExtensionPoint xsi:type="LaunchEvent">
+          <!-- <ExtensionPoint xsi:type="LaunchEvent">
             <LaunchEvents>
               <LaunchEvent Type="OnNewMessageCompose" FunctionName="onMessageComposeHandler"/>
               <LaunchEvent Type="OnNewAppointmentOrganizer" FunctionName="onAppointmentComposeHandler"/>
             </LaunchEvents>
+
             <SourceLocation resid="WebViewRuntime.Url"/>
-          </ExtensionPoint>
+          </ExtensionPoint> -->
 
         </DesktopFormFactor>
       </Host>
@@ -101,6 +101,5 @@
         <bt:String id="TaskpaneButton.SupertipText" DefaultValue="Open the Hello world add-in"/>
       </bt:LongStrings>
     </Resources>
-  </VersionOverrides>
   </VersionOverrides>
 </OfficeApp>
