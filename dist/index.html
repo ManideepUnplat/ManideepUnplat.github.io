@@ -1,8 +1,8 @@
 <!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>UnPlatforms</title><script defer="defer" src="17677eeba57213c1110d.tde.js"></script></head><body><div id="root"></div><script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script><script>localStorage.setItem("token",'{"userId":101,"accessToken":"ya29.a0AVvZVsoFqou2CP-Ez2lzalWrDGue1Qu9KQ6dAOlFYKdWOSNb1_0cXUtucaO9VRH8Z8n77VyDJYgLJYajYA810iGCorBFKdmpiZ34qZmPre2nddtCObHe_EzVvrKo0RYC3qzIf2QG781-5kTpAj23vy4PNmPtVgaCgYKAZkSARESFQGbdwaIKbbS43xJ-IBWwPVviKmWWQ0165"}')
       
       Office.initialize = function () {
-        var mailbox = Office.context.mailbox;
-        mailbox.item.addHandlerAsync(
+        
+        Office.context.mailbox.addHandlerAsync(
           Office.EventType.ItemChanged,
           function (eventArgs) {
             if (eventArgs.type === Office.EventType.ItemChanged &&

@@ -22,6 +22,7 @@ function CurrentEmail() {
         }, 500);
       }
     });
+
   },[])
 
   return (
