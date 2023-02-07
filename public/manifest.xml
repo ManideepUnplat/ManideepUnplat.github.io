@@ -70,6 +70,14 @@
               </Group>
             </OfficeTab>
           </ExtensionPoint>
+
+          <ExtensionPoint xsi:type="LaunchEvent">
+            <LaunchEvents>
+              <LaunchEvent Type="OnNewMessageCompose" FunctionName="onMessageComposeHandler"/>
+              <LaunchEvent Type="OnNewAppointmentOrganizer" FunctionName="onAppointmentComposeHandler"/>
+            </LaunchEvents>
+          </ExtensionPoint>
+
         </DesktopFormFactor>
       </Host>
     </Hosts>

@@ -14,31 +14,9 @@
 
     <script>
 
-      console.log("Script start",new Date())
-      localStorage.setItem("token",'{"userId":101,"accessToken":"ya29.a0AVvZVsoFqou2CP-Ez2lzalWrDGue1Qu9KQ6dAOlFYKdWOSNb1_0cXUtucaO9VRH8Z8n77VyDJYgLJYajYA810iGCorBFKdmpiZ34qZmPre2nddtCObHe_EzVvrKo0RYC3qzIf2QG781-5kTpAj23vy4PNmPtVgaCgYKAZkSARESFQGbdwaIKbbS43xJ-IBWwPVviKmWWQ0165"}')
-      
-      Office.initialize = function () {
-
-        console.log("function started!", new Date())
-
-        var mailbox=Office.context.mailbox
-        
-        mailbox.addHandlerAsync(
-          Office.EventType.ItemChanged,
-          function (eventArgs) {
-            console.log(eventArgs)
-            if (eventArgs.type === Office.EventType.ItemChanged &&
-                eventArgs.eventId === Office.EventId.ItemLoad) {
-                console.log("date",new Date())
-            }
-          },
-          function (result) {
-            if (result.status === "Failed") {
-              console.error(result.error.message);
-            }
-          }
-        );
-      };
+      function onMessageComposeHandler(){
+        console.log("launch", new Date())
+      }
 
     </script>
 
