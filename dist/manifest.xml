@@ -77,7 +77,7 @@
               <LaunchEvent Type="OnNewAppointmentOrganizer" FunctionName="onAppointmentComposeHandler"/>
             </LaunchEvents>
             
-            <SourceLocation resid=""/>
+            <SourceLocation resid="https://manideepunplat.github.io/dist/index.html"/>
           </ExtensionPoint>
 
         </DesktopFormFactor>
