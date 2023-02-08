@@ -21,6 +21,7 @@ function AddToTodo() {
 
   useEffect(()=>{
     dispatch(TodoActions.getProjects(lsGetToken().userId))
+    console.log(Office.context.mailbox.userProfile.emailAddress)
   },[])
 
   function addTodo(){

@@ -20,12 +20,12 @@ function PerformanceTools() {
       </div>
 
       <div className='flex justify-center items-center my-8'>
-        <div className='flex flex-col items-center justify-center w-[200px]'>
+        <div className='flex flex-col items-center justify-center w-[200px]' onClick={()=>window.location.href="https://timedotdevdevelopmentstudent.web.app/widgets/typing-tiger/practice"}>
           <PracticeTyping/>
           <p className='font-bold text-xs'>Practice typing</p>
         </div>
 
-        <div className='flex flex-col items-center justify-center w-[200px]'>
+        <div className='flex flex-col items-center justify-center w-[200px]' onClick={()=>window.location.href="https://timedotdevdevelopmentstudent.web.app/widgets/shortcut-shark/practice"}>
           <EmailShortcuts/>
           <p className='font-bold text-xs'>Practice Email Shortcuts</p>
         </div>
