@@ -63,7 +63,7 @@ module.exports = {
       insert: '#root'
     }),
     new HtmlWebpackPlugin({
-      template: './public/taskpane.html'
+      template: './public/index.html'
     }),
     new CopyPlugin({
       patterns: [
@@ -71,31 +71,10 @@ module.exports = {
           from: "public",
           to: "",
           globOptions:{
-            ignore: ["**/taskpane.*"]
+            ignore: ["**/index.*"]
           }
         }
       ]
-    }),
-    new ModuleFederationPlugin({
-      name: 'TDE',
-      filename: 'TDE.js',
-      remotes: {
-        '@TimeDev/Pomodoro': 'TDW_Pomodoro@/tdw-pomodoro/TDW_Pomodoro.js',
-        '@TimeDev/ShortcutShark': 'TDW_Shortcut_Shark@/tdw-shortcut-shark/TDW_Shortcut_Shark.js',
-        '@TimeDev/Todo': 'TDW_Todo@/tdw-todo/TDW_Todo.js',
-        '@TimeDev/TypingTiger': 'TDW_Typing_Tiger@/tdw-typing-tiger/TDW_Typing_Tiger.js',
-      },
-      exposes: {},
-      shared: {
-        react: {
-          singleton: true,
-          requiredVersion: deps['react']
-        },
-        'react-dom': {
-          singleton: true,
-          requiredVersion: deps['react-dom']
-        }
-      }
     }),
     new DotenvWebpackPlugin()
   ]
