@@ -71,14 +71,14 @@
             </OfficeTab>
           </ExtensionPoint>
 
-          <!-- <ExtensionPoint xsi:type="LaunchEvent">
+          <ExtensionPoint xsi:type="LaunchEvent">
             <LaunchEvents>
               <LaunchEvent Type="OnNewMessageCompose" FunctionName="onMessageComposeHandler"/>
               <LaunchEvent Type="OnNewAppointmentOrganizer" FunctionName="onAppointmentComposeHandler"/>
             </LaunchEvents>
 
             <SourceLocation resid="WebViewRuntime.Url"/>
-          </ExtensionPoint> -->
+          </ExtensionPoint>
 
         </DesktopFormFactor>
       </Host>
