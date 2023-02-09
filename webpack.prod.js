@@ -63,7 +63,7 @@ module.exports = {
       insert: '#root'
     }),
     new HtmlWebpackPlugin({
-      template: './public/index.html'
+      template: './public/taskpane.html'
     }),
     new CopyPlugin({
       patterns: [
@@ -71,7 +71,7 @@ module.exports = {
           from: "public",
           to: "",
           globOptions:{
-            ignore: ["**/index.*"]
+            ignore: ["**/taskpane.*"]
           }
         }
       ]
