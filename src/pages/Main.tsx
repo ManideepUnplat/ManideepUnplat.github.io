@@ -8,9 +8,9 @@ import PerformanceTools from '../components/PerformanceTools';
 function App() {
 
   return (
-    <div className='w-[305px]'>
+    <div className='w-[305px] border-r-2'>
       <Head/>
-      <div className='p-1'>
+      <div className='p-3'>
         <AddToTodo/>
         <CurrentEmail/>
         <EmailAnalytics/>
