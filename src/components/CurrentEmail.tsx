@@ -22,7 +22,7 @@ function CurrentEmail() {
 
             Office.context.mailbox.item.saveAsync(
               function callback(result) {
-                console.log(result)
+                console.log("result",result)
             });
 
             console.log(Object.keys(Office.context.diagnostics.version))
