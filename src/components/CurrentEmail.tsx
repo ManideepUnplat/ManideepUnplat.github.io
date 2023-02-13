@@ -19,7 +19,12 @@ function CurrentEmail() {
             });
 
             console.log("Start:")
-            console.log(Office.context.mailbox.item.dateTimeCreated)
+            if (Office.context.mailbox.item.itemType === Office.MailboxEnums.ItemType.Message) {
+                console.log(Office.context.mailbox.item.dateTimeCreated);
+            }
+            else {
+                console.log("The current item is not an email message.");
+            }          
 
           }
 
