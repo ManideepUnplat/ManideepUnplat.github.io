@@ -5,7 +5,7 @@ function Head() {
     <div>
       <div className='bg-[#5655C6] py-6 pl-6 sticky top-0 z-50 flex justify-between items-center'>
           <p className='font-bold text-white text-md'>TIME.DEV for Outlook</p>
-          <div className='p-3'>
+          <div className='p-3 cursor-pointer'>
             <svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0.5 0H27.5V3H0.5V0ZM0.5 7.5H27.5V10.5H0.5V7.5ZM0.5 15H27.5V18H0.5V15Z" fill="white"/>
             </svg>
