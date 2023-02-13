@@ -19,6 +19,7 @@ function CurrentEmail() {
             });
 
             console.log("Start:")
+            console.log(Office.context.diagnostics.version)
             if (Office.context.mailbox.item.itemType === Office.MailboxEnums.ItemType.Message) {
                 console.log(Office.context.mailbox.item.dateTimeCreated);
             }
