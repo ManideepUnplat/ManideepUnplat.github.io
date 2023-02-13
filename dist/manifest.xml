@@ -31,9 +31,9 @@
       </DesktopSettings>
     </Form>
   </FormSettings>
-  
+
   <Permissions>
-    <MailboxReadAccess>ReadItem</MailboxReadAccess>
+    <MailboxReadAccess>ReadWriteItem</MailboxReadAccess>
   </Permissions>
 
   <Rule xsi:type="RuleCollection" Mode="Or">
