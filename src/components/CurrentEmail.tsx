@@ -17,6 +17,10 @@ function CurrentEmail() {
               if(result.value.trim().split(/\s+/)[0]=='')setWords(0)
               else setWords(result.value.trim().split(/\s+/).length)
             });
+
+            console.log("Start:")
+            console.log(Office.context.mailbox.item.dateTimeCreated)
+
           }
 
         }, 500);
