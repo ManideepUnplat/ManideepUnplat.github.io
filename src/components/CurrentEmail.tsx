@@ -23,15 +23,8 @@ function CurrentEmail() {
             Office.context.mailbox.item.saveAsync(
               function callback(result) {
                 console.log("result",result)
-            });
-
-            console.log(Object.keys(Office.context.diagnostics.version))
-            if (Office.context.mailbox.item.itemType === Office.MailboxEnums.ItemType.Message) {
                 console.log(Office.context.mailbox.item.dateTimeModified);
-            }
-            else {
-                console.log("The current item is not an email message.");
-            }          
+            });         
 
           }
 
