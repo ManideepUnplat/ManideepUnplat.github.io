@@ -68,7 +68,7 @@ function AddToTodo() {
       <div className="flex justify-between">
         <div>
           <p className='py-1 text-xs'>Project</p>
-          <select value={project} className='w-[130px] border' name="project" id='project' onChange={(e)=>setProject(e.target.value)}>
+          <select value={project} className='w-[130px] border text-xs' name="project" id='project' onChange={(e)=>setProject(e.target.value)}>
             <option value="select">Select</option>
             {
               reduxStateTodo?.todos?.map((e: any, i: number)=>
@@ -80,7 +80,7 @@ function AddToTodo() {
 
         <div>
           <p className='py-1 text-xs'>Priority</p>
-          <select value={priority} className='w-[130px] border' name="priority" id='priority' onChange={(e)=>setPriority(e.target.value)}>
+          <select value={priority} className='w-[130px] border text-xs' name="priority" id='priority' onChange={(e)=>setPriority(e.target.value)}>
             <option value="select">Select</option>
             <option value="high">High</option>
             <option value="medium">Medium</option>
