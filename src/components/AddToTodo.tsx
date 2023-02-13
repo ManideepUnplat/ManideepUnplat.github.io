@@ -44,7 +44,7 @@ function AddToTodo() {
     <div className='text-[#000000]'>
       <p className='block font-bold mt-6 text-md'>ADD TO TODO</p>
       <div className="border border-[black]"></div>
-      <p className='py-1 font-bold py-3 text-xs'>Task Name</p>
+      <p className='py-1 font-bold text-xs'>Task Name</p>
 
       <input onChange={(e)=>setName(e.target.value)} value={name} className='text-xs w-full focus:outline-none' placeholder='Your NYT Summary for the day'/>
 
