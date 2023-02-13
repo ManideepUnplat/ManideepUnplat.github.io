@@ -13,7 +13,7 @@ function App() {
       <div className='p-3'>
         <AddToTodo/>
         <CurrentEmail/>
-        <EmailAnalytics/>
+        {/* <EmailAnalytics/> */}
         <PerformanceTools/>
       </div>
     </div>
