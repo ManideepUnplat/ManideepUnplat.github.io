@@ -19,9 +19,9 @@ function CurrentEmail() {
             });
 
             console.log("Start:")
-            console.log(Office.context.diagnostics.version)
+            console.log(Object.keys(Office.context.diagnostics.version))
             if (Office.context.mailbox.item.itemType === Office.MailboxEnums.ItemType.Message) {
-                console.log(Office.context.mailbox.item.dateTimeCreated);
+                console.log(Office.context.mailbox.item.dateTimeModified);
             }
             else {
                 console.log("The current item is not an email message.");
@@ -40,24 +40,24 @@ function CurrentEmail() {
       <p className='text-md font-bold'>CURRENT EMAIL</p>
 
       <div className="flex py-2 border-t-2 border-[black] font-bold">
-        <p className='w-[155px]'></p>
+        {/* <p className='w-[155px]'></p>
         <p className='w-[48px]'></p>
         <p className='w-[48px] text-center text-[#CFCFCF] text-xs'>Average</p>
-        <p className='w-[48px] text-center text-[#CFCFCF] text-xs'>Peers</p>
+        <p className='w-[48px] text-center text-[#CFCFCF] text-xs'>Peers</p> */}
       </div>
 
-      <div className="flex py-2">
+      {/* <div className="flex py-2">
         <p className='w-[155px] font-bold text-xs'>Current time writing email:</p>
         <p className='w-[48px] font-bold text-center text-xs'>3 min</p>
         <p className='w-[48px] text-center text-[#CFCFCF] text-xs'>6 min</p>
         <p className='w-[48px] text-center text-[#CFCFCF] text-xs'>6 min</p>
-      </div>
+      </div> */}
 
       <div className="flex py-2">
         <p className='w-[155px] font-bold text-xs'>Email word count:</p>
         <p className='w-[48px] font-bold text-center text-xs'>{words}</p>
-        <p className='w-[48px] text-center text-[#CFCFCF] text-xs'>280</p>
-        <p className='w-[48px] text-center text-[#CFCFCF] text-xs'>280</p>
+        {/* <p className='w-[48px] text-center text-[#CFCFCF] text-xs'>280</p>
+        <p className='w-[48px] text-center text-[#CFCFCF] text-xs'>280</p> */}
       </div>
 
     </div>
