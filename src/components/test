@@ -1,0 +1,37 @@
+{
+  (clientPlatform = web),
+    (formInput = {
+      checkbox_field: one,
+      date_field: { msSinceEpoch: 1.6765056e12 },
+      task: task
+    }),
+    (parameters = {}),
+    (gmail = {
+      threadId: 'thread-f:1757839701359122159',
+      accessToken:
+        ACiX_iYPffvQzV5pBT1GrmS40tWAOJ72cFuI1qqQzijTuKMOt8XG5n57BVW0TsOjN88Tb4VmpKMTjE_IYScPcCmklmTXY_CRoj24yfIO0zKx77nydd4RmgzP0ITING6ep40QijeJE -
+        Tb_D8UvTUMwDE3h1wlwxyRNg,
+      messageId: 'msg-f:1757839701359122159'
+    }),
+    (formInputs = {
+      date_field: [{ msSinceEpoch: 1.6765056e12 }],
+      checkbox_field: [one],
+      task: [task]
+    }),
+    (commonEventObject = {
+      formInputs: {
+        task: { stringInputs: { value: [task] } },
+        date_field: { dateInput: { msSinceEpoch: 1.6765056e12 } },
+        checkbox_field: { stringInputs: { value: [one] } }
+      },
+      hostApp: GMAIL,
+      platform: WEB
+    }),
+    (messageMetadata = {
+      threadId: 'thread-f:1757839701359122159',
+      messageId: 'msg-f:1757839701359122159',
+      accessToken:
+        'ACiX_iYrO7tRswCr54S4v9XAUqff8GB2aD2fGk7uvI9vjc9ZmEUZ_-UzpF6uEHk1_xAgxRy_XMi3IAm4HajPovrv-8plQ7tBxJiZp5GhbTv_gcwEYDGDOtBNbDKRJFUbS9JEwPnkE7aeOpOQl9eanSDVyeTcjq6x1Q'
+    }),
+    (hostApp = gmail);
+}

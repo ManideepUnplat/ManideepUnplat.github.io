@@ -665,6 +665,9 @@ video {
 .max-h-\[176px\]{
   max-height: 176px;
 }
+.min-h-\[100vh\]{
+  min-height: 100vh;
+}
 .min-h-screen{
   min-height: 100vh;
 }

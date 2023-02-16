@@ -23,7 +23,7 @@ function CurrentEmail() {
             Office.context.mailbox.item.saveAsync(
               function callback(result) {
                 console.log("resultu",result)
-                console.log(Office.context.mailbox.item.dateTimeModified);
+                // console.log(Office.context.mailbox.item.dateTimeModified);
             });         
 
           }
