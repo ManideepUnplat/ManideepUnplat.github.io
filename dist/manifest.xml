@@ -7,7 +7,7 @@
   <Version>1.0.0.0</Version>
   <ProviderName>Contoso</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Time.Dev Todo"/>
+  <DisplayName DefaultValue="Time.Dev for Outlook"/>
   <Description DefaultValue="Time.Dev Add-in."/>
   <IconUrl DefaultValue="https://manideepunplat.github.io/dist/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://manideepunplat.github.io/dist/assets/icon-64.png"/>
@@ -85,8 +85,8 @@
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="CommandsGroup.Label" DefaultValue="Contoso Add-in"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Time.Dev Todo"/>
-        <bt:String id="TaskpaneButton.SupertipTitle" DefaultValue="Time.Dev Todo"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Time.Dev for Outlook"/>
+        <bt:String id="TaskpaneButton.SupertipTitle" DefaultValue="Time.Dev for Outlook"/>
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="TaskpaneButton.SupertipText" DefaultValue="Open the Hello world add-in"/>
