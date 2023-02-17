@@ -9,18 +9,17 @@ function LoginPage(props: any) {
   const reduxState = useAppSelector((state) => state);
 
   const login = async () => {
-
-    const email = Office.context.mailbox.userProfile.emailAddress
-    await dispatch(
+    const email = Office.context.mailbox.userProfile.emailAddress;
+    dispatch(
       TodoActions.login(email, (e) => {
         console.log(e.data[0].userId);
         localStorage.setItem(
-            'token',
-            JSON.stringify({
-                userId:e.data[0].userId
-            })
-          );
-          props.setIsLoggedIn(true);
+          'token',
+          JSON.stringify({
+            userId: e.data[0].userId
+          })
+        );
+        props.setIsLoggedIn(true);
       })
     );
   };
