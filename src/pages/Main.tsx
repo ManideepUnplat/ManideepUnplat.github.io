@@ -17,7 +17,7 @@ function App() {
   },[])
 
   return (
-    <div className='w-[310px] min-h-[100vh] border-r-2'>
+    <div className='w-[315px] min-h-[100vh] border-r-2'>
       <Head/>
       {
         isLoggedIn?
