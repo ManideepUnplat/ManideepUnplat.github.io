@@ -20,6 +20,8 @@ function LoginPage(props: any) {
 
   const login = async () => {
 
+    console.log(email)
+
     if (email) {
         dispatch(
             TodoActions.login(email, (e) => {
