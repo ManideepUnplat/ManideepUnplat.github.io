@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import TimeDev from '../images/timeDev.png';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
 import Button from './common/Button';
@@ -9,12 +9,12 @@ function LoginPage(props: any) {
   const reduxState = useAppSelector((state) => state);
 
   const login = async () => {
-    var email: any;
+    var [email,setEmail] = useState<any>(undefined);
 
     useEffect(()=>{
         Office.onReady((info: any) => {
             if (info.host === Office.HostType.Outlook) {
-                email = Office.context.mailbox.userProfile.emailAddress;
+                setEmail(Office.context.mailbox.userProfile.emailAddress);
             }
         });
     },[])
