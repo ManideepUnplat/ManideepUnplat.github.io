@@ -1,7 +1,9 @@
 import { createReducer, PayloadAction } from '@reduxjs/toolkit';
 import { TodoTypes } from '../types';
 
-const initialState: any = {};
+const initialState: any = {
+  email:""
+};
 
 export default createReducer(initialState, (builder) => {
   
@@ -26,6 +28,21 @@ export default createReducer(initialState, (builder) => {
       if (action.payload.data)
         return {
           ...state
+        };
+      return {
+        ...state,
+        error: action.payload.message
+      };
+    }
+  );
+  
+  builder.addCase(
+    TodoTypes.ACTION.LOGIN,
+    (state, action: PayloadAction<any>) => {
+      if (action.payload.data)
+        return {
+          ...state,
+          email: action.payload.data[0]
         };
       return {
         ...state,
