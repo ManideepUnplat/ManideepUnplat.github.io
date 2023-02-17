@@ -11,10 +11,13 @@ function LoginPage(props: any) {
   const login = async () => {
     var email: any;
 
-    Office.onReady((info: any) => {
-        console.log(Office.context.mailbox.userProfile.emailAddress)
-      email = Office.context.mailbox.userProfile.emailAddress;
-    });
+    useEffect(()=>{
+        Office.onReady((info: any) => {
+            if (info.host === Office.HostType.Outlook) {
+                email = Office.context.mailbox.userProfile.emailAddress;
+            }
+        });
+    },[])
 
     useEffect(() => {
       if (email) {
