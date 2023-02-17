@@ -8,33 +8,38 @@ function LoginPage(props: any) {
   const dispatch = useAppDispatch();
   const reduxState = useAppSelector((state) => state);
 
-    var [email,setEmail] = useState<any>(undefined);
-    
-    useEffect(()=>{
-        Office.onReady((info: any) => {
-            if (info.host === Office.HostType.Outlook) {
-                setEmail(Office.context.mailbox.userProfile.emailAddress);
-            }
-        });
-    },[])
+  var [email, setEmail] = useState<any>(undefined);
+
+  useEffect(() => {
+    Office.onReady((info: any) => {
+      if (info.host === Office.HostType.Outlook) {
+        setEmail(Office.context.mailbox.userProfile.emailAddress);
+      }
+    });
+  }, []);
 
   const login = async () => {
-
-    console.log(email)
+    console.log(email);
 
     if (email) {
-        dispatch(
-            TodoActions.login(email, (e) => {
+      dispatch(
+        TodoActions.login(
+          email,
+          (e) => {
             console.log(e.data[0].userId);
             localStorage.setItem(
-                'token',
-                JSON.stringify({
+              'token',
+              JSON.stringify({
                 userId: e.data[0].userId
-                })
+              })
             );
             props.setIsLoggedIn(true);
-            })
-        );
+          },
+          (e) => {
+            console.log(e);
+          }
+        )
+      );
     }
   };
 
