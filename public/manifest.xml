@@ -7,8 +7,8 @@
   <Version>1.0.0.0</Version>
   <ProviderName>Contoso</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Hello world"/>
-  <Description DefaultValue="A simple hello world Office Add-in."/>
+  <DisplayName DefaultValue="Time.Dev Todo"/>
+  <Description DefaultValue="Time.Dev Add-in."/>
   <IconUrl DefaultValue="https://manideepunplat.github.io/dist/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://manideepunplat.github.io/dist/assets/icon-64.png"/>
   <SupportUrl DefaultValue="https://learn.microsoft.com/office/dev/add-ins/overview/office-add-in-code-samples"/>
@@ -47,8 +47,7 @@
     <Hosts>
       <Host xsi:type="MailHost">
         <DesktopFormFactor>
-
-          <!-- Message Compose -->
+        
           <ExtensionPoint xsi:type="MessageComposeCommandSurface">
             <OfficeTab id="TabDefault">
               <Group id="msgComposeCmdGroup">
@@ -71,6 +70,7 @@
               </Group>
             </OfficeTab>
           </ExtensionPoint>
+
         </DesktopFormFactor>
       </Host>
     </Hosts>
@@ -85,8 +85,8 @@
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="CommandsGroup.Label" DefaultValue="Contoso Add-in"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Hello world"/>
-        <bt:String id="TaskpaneButton.SupertipTitle" DefaultValue="Hello world"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Time.Dev Todo"/>
+        <bt:String id="TaskpaneButton.SupertipTitle" DefaultValue="Time.Dev Todo"/>
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="TaskpaneButton.SupertipText" DefaultValue="Open the Hello world add-in"/>
