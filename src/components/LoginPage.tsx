@@ -8,9 +8,8 @@ function LoginPage(props: any) {
   const dispatch = useAppDispatch();
   const reduxState = useAppSelector((state) => state);
 
-  const login = async () => {
     var [email,setEmail] = useState<any>(undefined);
-
+    
     useEffect(()=>{
         Office.onReady((info: any) => {
             if (info.host === Office.HostType.Outlook) {
@@ -19,22 +18,22 @@ function LoginPage(props: any) {
         });
     },[])
 
-    useEffect(() => {
-      if (email) {
+  const login = async () => {
+
+    if (email) {
         dispatch(
-          TodoActions.login(email, (e) => {
+            TodoActions.login(email, (e) => {
             console.log(e.data[0].userId);
             localStorage.setItem(
-              'token',
-              JSON.stringify({
+                'token',
+                JSON.stringify({
                 userId: e.data[0].userId
-              })
+                })
             );
             props.setIsLoggedIn(true);
-          })
+            })
         );
-      }
-    }, [email]);
+    }
   };
 
   return (
