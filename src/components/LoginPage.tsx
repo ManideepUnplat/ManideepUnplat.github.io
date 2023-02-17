@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import TimeDev from '../images/timeDev.png';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
 import Button from './common/Button';
@@ -9,19 +9,28 @@ function LoginPage(props: any) {
   const reduxState = useAppSelector((state) => state);
 
   const login = async () => {
-    const email = Office.context.mailbox.userProfile.emailAddress;
-    dispatch(
-      TodoActions.login(email, (e) => {
-        console.log(e.data[0].userId);
-        localStorage.setItem(
-          'token',
-          JSON.stringify({
-            userId: e.data[0].userId
+    var email: any;
+
+    Office.onReady((info: any) => {
+      email = Office.context.mailbox.userProfile.emailAddress;
+    });
+
+    useEffect(() => {
+      if (email) {
+        dispatch(
+          TodoActions.login(email, (e) => {
+            console.log(e.data[0].userId);
+            localStorage.setItem(
+              'token',
+              JSON.stringify({
+                userId: e.data[0].userId
+              })
+            );
+            props.setIsLoggedIn(true);
           })
         );
-        props.setIsLoggedIn(true);
-      })
-    );
+      }
+    }, [email]);
   };
 
   return (
