@@ -1012,10 +1012,6 @@ video {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.py-6{
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1067,9 +1063,6 @@ video {
 .px-\[130px\]{
   padding-left: 130px;
   padding-right: 130px;
-}
-.pl-6{
-  padding-left: 1.5rem;
 }
 .pr-2{
   padding-right: 0.5rem;
