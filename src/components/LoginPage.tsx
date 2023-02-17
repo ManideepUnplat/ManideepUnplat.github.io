@@ -12,6 +12,7 @@ function LoginPage(props: any) {
     var email: any;
 
     Office.onReady((info: any) => {
+        console.log(Office.context.mailbox.userProfile.emailAddress)
       email = Office.context.mailbox.userProfile.emailAddress;
     });
 
