@@ -89,7 +89,7 @@
         <bt:String id="TaskpaneButton.SupertipTitle" DefaultValue="Time.Dev for Outlook"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="TaskpaneButton.SupertipText" DefaultValue="Open the Hello world add-in"/>
+        <bt:String id="TaskpaneButton.SupertipText" DefaultValue="Open the Time.Dev for Outlook add-in"/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
