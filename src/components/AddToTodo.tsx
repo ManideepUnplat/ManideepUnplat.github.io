@@ -21,6 +21,17 @@ function AddToTodo() {
 
   useEffect(()=>{
     dispatch(TodoActions.getProjects(lsGetToken().userId))
+
+    Office.onReady((info: any) => {
+      if (info.host === Office.HostType.Outlook) {
+          
+          if(Office.context.mailbox.item){
+            Office.context.mailbox.item.subject.getAsync((result)=>setName(result.value));
+          }
+
+      }
+    });
+
   },[])
 
   function addTodo(){
