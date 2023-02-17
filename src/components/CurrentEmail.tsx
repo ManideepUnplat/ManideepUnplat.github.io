@@ -6,33 +6,33 @@ function CurrentEmail() {
   const [time,setTime] = useState("")
   const [words,setWords] = useState(0)
 
-  // useEffect(()=>{
-  //   Office.onReady((info: any) => {
-  //     if (info.host === Office.HostType.Outlook) {
+  useEffect(()=>{
+    Office.onReady((info: any) => {
+      if (info.host === Office.HostType.Outlook) {
 
-  //       setInterval(function () {
+        setInterval(function () {
           
-  //         if(Office.context.mailbox.item){
-  //           Office.context.mailbox.item.body.getAsync("text", function (result : any) {
-  //             if(result.value.trim().split(/\s+/)[0]=='')setWords(0)
-  //             else setWords(result.value.trim().split(/\s+/).length)
-  //           });
+          if(Office.context.mailbox.item){
+            Office.context.mailbox.item.body.getAsync("text", function (result : any) {
+              if(result.value.trim().split(/\s+/)[0]=='')setWords(0)
+              else setWords(result.value.trim().split(/\s+/).length)
+            });
 
-  //           console.log("Start:")
+            // console.log("Start:")
 
-  //           Office.context.mailbox.item.saveAsync(
-  //             function callback(result) {
-  //               console.log("resultu",result)
-  //               console.log(Office.context.mailbox.item.dateTimeModified);
-  //           });         
+            // Office.context.mailbox.item.saveAsync(
+            //   function callback(result) {
+            //     console.log("resultu",result)
+            //     console.log(Office.context.mailbox.item.dateTimeModified);
+            // });     
 
-  //         }
+          }
 
-  //       }, 500);
-  //     }
-  //   });
+        }, 500);
+      }
+    });
 
-  // },[])
+  },[])
 
   return (
     <div className='mt-12'>
