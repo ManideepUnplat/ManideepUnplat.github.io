@@ -24,11 +24,9 @@ function AddToTodo() {
 
     Office.onReady((info: any) => {
       if (info.host === Office.HostType.Outlook) {
-          
           if(Office.context.mailbox.item){
             Office.context.mailbox.item.subject.getAsync((result)=>setName(result.value));
           }
-
       }
     });
 
@@ -47,6 +45,7 @@ function AddToTodo() {
         setProject("")
         setPriority("")
         setName("")
+        dispatch(TodoActions.addedEmail(true))
       }))
     }
   }
@@ -64,7 +63,7 @@ function AddToTodo() {
       <div className="flex py-5 items-center justify-between">
         <p className='text-xs'>Due date</p>
         <div className='relative'>
-          <div onClick={()=>setIsOpen(!isOpen)} className='w-[220px] border rounded p-2 flex flex-grow justify-end'>
+          <div onClick={()=>setIsOpen(!isOpen)} className='w-[220px] border rounded p-1 flex flex-grow justify-end'>
             <Calendar/>
           </div>
           {

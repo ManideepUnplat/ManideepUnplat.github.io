@@ -6,7 +6,6 @@ import { TodoActions } from '../redux/actions';
 
 function LoginPage(props: any) {
   const dispatch = useAppDispatch();
-  const reduxState = useAppSelector((state) => state);
 
   var [email, setEmail] = useState<any>(undefined);
 
@@ -44,34 +43,36 @@ function LoginPage(props: any) {
   };
 
   return (
-    <div>
-      <br />
-      <img src={TimeDev} alt="logo" className="w-[200px] block mx-auto" />
-      <br />
-      <br />
+    <>
+      <div>
+        <br />
+        <img src={TimeDev} alt="logo" className="w-[200px] block mx-auto" />
+        <br />
+        <br />
 
-      <p className="text-center font-bold">Login to Time.Dev to add new task</p>
+        <p className="text-center font-bold">Login to Time.Dev to add new task</p>
 
-      <br />
-      <div className="flex justify-center">
-        <Button
-          onClick={login}
-          isPrimary
-          label={'Login to Time.dev'}
-          size={'sm'}
-        />
+        <br />
+        <div className="flex justify-center">
+          <Button
+            onClick={login}
+            isPrimary
+            label={'Login to Time.dev'}
+            size={'sm'}
+          />
+        </div>
+
+        <br />
+        <br />
+        <br />
+
+        <div className="flex justify-center">
+          <a href="" className="text-[#5655c6] text-center underline font-bold">
+            About Time.Dev
+          </a>
+        </div>
       </div>
-
-      <br />
-      <br />
-      <br />
-
-      <div className="flex justify-center">
-        <a href="" className="text-[#5655c6] text-center underline font-bold">
-          About Time.Dev
-        </a>
-      </div>
-    </div>
+    </>
   );
 }
 

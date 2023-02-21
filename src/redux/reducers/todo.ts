@@ -2,7 +2,9 @@ import { createReducer, PayloadAction } from '@reduxjs/toolkit';
 import { TodoTypes } from '../types';
 
 const initialState: any = {
-  email:""
+  email:"",
+  showLogout: false,
+  addedEmail: false
 };
 
 export default createReducer(initialState, (builder) => {
@@ -47,6 +49,26 @@ export default createReducer(initialState, (builder) => {
       return {
         ...state,
         error: action.payload.message
+      };
+    }
+  );
+  
+  builder.addCase(
+    TodoTypes.ACTION.SHOW_LOGOUT,
+    (state, action: PayloadAction<any>) => {
+      return {
+        ...state,
+        showLogout: action.payload
+      };
+    }
+  );
+  
+  builder.addCase(
+    TodoTypes.ACTION.ADDED_EMAIL,
+    (state, action: PayloadAction<any>) => {
+      return {
+        ...state,
+        addedEmail: action.payload
       };
     }
   );

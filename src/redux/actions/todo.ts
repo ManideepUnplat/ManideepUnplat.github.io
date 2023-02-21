@@ -46,3 +46,22 @@ export const login = (
   };
   return fetchHandler(fetchOptions, successHandler, errorHandler);
 };
+
+
+export const showLogout = (val: boolean) => {
+  return (dispatch: any) => {
+    dispatch({
+      type: TodoTypes.ACTION.SHOW_LOGOUT,
+      payload: val
+    });
+  };
+};
+
+export const addedEmail = (val: boolean) => {
+  return (dispatch: any) => {
+    dispatch({
+      type: TodoTypes.ACTION.ADDED_EMAIL,
+      payload: val
+    });
+  };
+};

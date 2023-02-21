@@ -19,7 +19,7 @@ function PerformanceTools() {
         <p className='w-[48px] text-center text-[#CFCFCF] text-xs'>65 wpm</p>
       </div> */}
 
-      <div className='flex justify-center items-center my-8'>
+      <div className='flex justify-center items-center my-8 cursor-pointer'>
         <div className='flex flex-col items-center justify-center w-[200px]' onClick={()=>window.location.href="https://timedotdevdevelopmentstudent.web.app/widgets/typing-tiger/practice"}>
           <PracticeTyping/>
           <p className='font-bold text-xs'>Practice typing</p>
