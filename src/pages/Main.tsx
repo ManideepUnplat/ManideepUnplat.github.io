@@ -22,7 +22,7 @@ function App() {
   },[])
 
   return (
-    <div className={`mx-auto w-[305px] min-h-[100vh]`}>
+    <div className={`${isLoggedIn?"w-[300px]":"w-[305px]"} mx-auto min-h-[100vh]`}>
       <Head isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
       {
         isLoggedIn?
