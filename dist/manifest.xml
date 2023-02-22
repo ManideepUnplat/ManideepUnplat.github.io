@@ -17,6 +17,7 @@
   </AppDomains>
   <Hosts>
     <Host Name="Mailbox"/>
+    <Host Name="Inbox"/>
   </Hosts>
   <Requirements>
     <Sets>
