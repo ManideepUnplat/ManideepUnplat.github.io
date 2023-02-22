@@ -49,15 +49,30 @@
         <DesktopFormFactor>
 
           <ExtensionPoint xsi:type="FocusedInboxTab">
-            <Label resid="paneComposeButtonLabel" />
-            <IconUrl resid="icon16" />
-            <IconUrl resid="icon32" />
-            <IconUrl resid="icon80" />
-            <FunctionFile resid="functionFile" />
-            <Action xsi:type="ShowTaskpane">
-              <TaskpaneId>ButtonId1</TaskpaneId>
-              <SourceLocation resid="messageReadTaskPaneUrl" />
-            </Action>
+            <Label resid="TabLabel" />
+            <Icon>
+              <bt:Image size="16" resid="SmallIcon" />
+              <bt:Image size="32" resid="LargeIcon" />
+              <bt:Image size="80" resid="HeroImage" />
+            </Icon>
+            <GroupBy>
+              <bt:Properties>
+                <bt:Property Name="System.MessageList.DateReceived" />
+              </bt:Properties>
+            </GroupBy>
+            <TabSettings>
+              <TabColor>#E6E6E6</TabColor>
+              <HighContrastTabColor>#FFFFFF</HighContrastTabColor>
+              <ShowOn>
+                <Rule xsi:type="RuleCollection" Mode="Or">
+                  <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
+                  <Rule xsi:type="ItemIs" ItemType="Message" FormType="Edit" />
+                </Rule>
+              </ShowOn>
+              <HideOn>
+                <Rule xsi:type="ItemIs" ItemType="Message" FormType="Compose" />
+              </HideOn>
+            </TabSettings>
           </ExtensionPoint>
         
           <ExtensionPoint xsi:type="MessageComposeCommandSurface">
