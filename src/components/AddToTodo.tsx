@@ -5,6 +5,7 @@ import Button from './common/Button'
 import { useAppDispatch, useAppSelector } from '../redux/hooks'
 import { TodoActions } from '../redux/actions'
 import { lsGetToken } from '../common-utils/helper'
+import ProjectSelect from './ProjectSelect'
 
 function AddToTodo() {
 
@@ -13,7 +14,7 @@ function AddToTodo() {
   const reduxStateTodo = useAppSelector((state)=>state.todo)
 
   const [date,setDate] = useState(new Date().toISOString())
-  const [project,setProject] = useState("select")
+  const [project,setProject] = useState({})
   const [priority,setPriority] = useState("select")
   const [name,setName] = useState("")
 
@@ -21,6 +22,7 @@ function AddToTodo() {
 
   useEffect(()=>{
     dispatch(TodoActions.getProjects(lsGetToken().userId))
+    dispatch(TodoActions.getWorkspaces(lsGetToken().userId))
 
     Office.onReady((info: any) => {
       if (info.host === Office.HostType.Outlook) {
@@ -37,9 +39,9 @@ function AddToTodo() {
       dispatch(TodoActions.postProject({
         userId: lsGetToken().userId,
         todoTitle: name,
-        projectId: project,
         priority: priority,
-        dueDate: date.split("T")[0]+" "+date.split("T")[1]
+        dueDate: date.split("T")[0]+" "+date.split("T")[1],
+        ...project,
       },()=>{
         setDate(new Date().toISOString())
         setProject("")
@@ -78,14 +80,17 @@ function AddToTodo() {
       <div className="flex justify-between">
         <div>
           <p className='py-1 text-xs'>Project</p>
-          <select value={project} className='w-[130px] border text-xs' name="project" id='project' onChange={(e)=>setProject(e.target.value)}>
+          {/* <select value={project} className='w-[130px] border text-xs' name="project" id='project' onChange={(e)=>setProject(e.target.value)}>
             <option value="select">Select</option>
             {
               reduxStateTodo?.todos?.map((e: any, i: number)=>
                 <option value={e.projectId} key={i}>{e.projectTitle}</option>
               )
             }
-          </select>
+          </select> */}
+          <ProjectSelect onClick={(e: any)=>{
+            setProject(e)
+          }}/>
         </div>
 
         <div>
@@ -102,7 +107,6 @@ function AddToTodo() {
       <div className='flex items-center justify-center mt-8'>
         <Button onClick={()=>addTodo()} twAddonStyles={{button : 'mx-auto' }} isPrimary label={'Add Task'} size={'sm'}/>
       </div>
-
     </div>
   )
 }

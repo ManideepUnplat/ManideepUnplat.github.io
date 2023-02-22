@@ -73,4 +73,19 @@ export default createReducer(initialState, (builder) => {
     }
   );
 
+  builder.addCase(
+    TodoTypes.ACTION.GET_WORKSPACES,
+    (state, action: PayloadAction<any>) => {
+      if (action.payload.data)
+        return {
+          ...state,
+          workspaces: action.payload.data
+        };
+      return {
+        ...state,
+        error: action.payload.message
+      };
+    }
+  );
+
 });

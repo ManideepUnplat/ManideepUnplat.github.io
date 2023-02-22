@@ -7,6 +7,7 @@ import Head from '../components/Head';
 import LoginPage from '../components/LoginPage';
 import Logout from '../components/Logout';
 import PerformanceTools from '../components/PerformanceTools';
+import { showLogout } from '../redux/actions/todo';
 import { useAppSelector } from '../redux/hooks';
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
   },[])
 
   return (
-    <div className='w-[315px] min-h-[100vh] border-r-2'>
+    <div className={`mx-auto w-[305px] min-h-[100vh]`}>
       <Head isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
       {
         isLoggedIn?

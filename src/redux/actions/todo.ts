@@ -17,6 +17,19 @@ export const getProjects = (
   return fetchHandler(fetchOptions, successHandler, errorHandler);
 };
 
+export const getWorkspaces = ( 
+  uid: number | string,
+  successHandler?: (response: any) => void,
+  errorHandler?: (response: any) => void
+  ) => {
+  const fetchOptions : FetchOptions = {
+    url: `${baseUrl}/workspace/get-workspaces/${uid}`,
+    method: 'GET',
+    actionType: TodoTypes.ACTION.GET_WORKSPACES
+  };
+  return fetchHandler(fetchOptions, successHandler, errorHandler);
+};
+
 export const postProject = ( 
   payload: any,
   successHandler?: (response: any) => void,
