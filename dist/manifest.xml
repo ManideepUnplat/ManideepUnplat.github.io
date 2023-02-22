@@ -47,6 +47,18 @@
     <Hosts>
       <Host xsi:type="MailHost">
         <DesktopFormFactor>
+
+          <ExtensionPoint xsi:type="FocusedInboxTab">
+            <Label resid="paneComposeButtonLabel" />
+            <IconUrl resid="icon16" />
+            <IconUrl resid="icon32" />
+            <IconUrl resid="icon80" />
+            <FunctionFile resid="functionFile" />
+            <Action xsi:type="ShowTaskpane">
+              <TaskpaneId>ButtonId1</TaskpaneId>
+              <SourceLocation resid="messageReadTaskPaneUrl" />
+            </Action>
+          </ExtensionPoint>
         
           <ExtensionPoint xsi:type="MessageComposeCommandSurface">
             <OfficeTab id="TabDefault">
@@ -69,18 +81,6 @@
                 </Control>
               </Group>
             </OfficeTab>
-          </ExtensionPoint>
-
-          <ExtensionPoint xsi:type="FocusedInboxTab">
-            <Label resid="paneComposeButtonLabel" />
-            <IconUrl resid="icon16" />
-            <IconUrl resid="icon32" />
-            <IconUrl resid="icon80" />
-            <FunctionFile resid="functionFile" />
-            <Action xsi:type="ShowTaskpane">
-              <TaskpaneId>ButtonId1</TaskpaneId>
-              <SourceLocation resid="messageReadTaskPaneUrl" />
-            </Action>
           </ExtensionPoint>
 
         </DesktopFormFactor>
