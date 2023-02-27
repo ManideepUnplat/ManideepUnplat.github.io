@@ -23,6 +23,7 @@ function App() {
 
 
   useEffect(() => {
+    console.log("Started")
     const handleKeyDown = (event : any) => {
       if (event.ctrlKey && event.shiftKey && event.keyCode === 65) {
         console.log("pressed");
