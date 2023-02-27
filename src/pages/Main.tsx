@@ -22,8 +22,10 @@ function App() {
   },[])
 
   
-  const handleKeyPress = useCallback((event: { key: any; }) => {
-    console.log(`Key pressed: ${event.key}`);
+  const handleKeyPress = useCallback((event : any) => {
+    if (event.ctrlKey && event.shiftKey && event.keyCode === 65) {
+      console.log("A")
+    }
   }, []);
 
   useEffect(() => {
