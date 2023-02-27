@@ -40,7 +40,7 @@ function ProjectSelect(props: any) {
                                     </div>
                                         {
                                         project?.sections?.map((section: any,k: number)=>
-                                            <div className='pl-12 hover:bg-blue-400 hover:text-white cursor-pointer pr-2' key={k} onClick={()=>{
+                                            <div className='pl-12 hover:bg-blue-400 hover:text-white cursor-pointer pr-2 flex' key={k} onClick={()=>{
                                                 setSelectedOption(section.sectionTitle)
                                                 props.onClick({
                                                     sectionId : section.sectionId,
@@ -48,6 +48,10 @@ function ProjectSelect(props: any) {
                                                 })
                                                 setIsopen(!isOpen)
                                                 }}>
+                                                <svg className='mx-2' width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.5 11.5H11.5063M1.5 11.5H1.50625M4 11.5H4.00625M6.5 11.5H6.50625M9 11.5H9.00625M11.5 1.5H11.5063M1.5 1.5H1.50625M4 1.5H4.00625M6.5 1.5H6.50625M1.5 4.625C1.5 4.45924 1.56585 4.30027 1.68306 4.18306C1.80027 4.06585 1.95924 4 2.125 4H10.875C11.0408 4 11.1997 4.06585 11.3169 4.18306C11.4342 4.30027 11.5 4.45924 11.5 4.625V8.375C11.5 8.54076 11.4342 8.69973 11.3169 8.81694C11.1997 8.93415 11.0408 9 10.875 9H2.125C1.95924 9 1.80027 8.93415 1.68306 8.81694C1.56585 8.69973 1.5 8.54076 1.5 8.375V4.625Z" stroke="#7B7D85" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+
                                                 {section.sectionTitle}
                                             </div>
                                         )

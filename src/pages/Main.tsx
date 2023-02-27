@@ -21,6 +21,22 @@ function App() {
     }
   },[])
 
+
+  useEffect(() => {
+    const handleKeyDown = (event : any) => {
+      if (event.ctrlKey && event.shiftKey && event.keyCode === 65) {
+        console.log("pressed");
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
+
   return (
     <div className={`${isLoggedIn?"w-[300px]":"w-[305px]"} mx-auto min-h-[100vh]`}>
       <Head isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
@@ -31,7 +47,7 @@ function App() {
           reduxState.showLogout ? <Logout setIsLoggedIn={setIsLoggedIn}/>:
           <div className='p-3'>
             {
-              reduxState.addedTask ? <EmailAdded/> : <AddToTodo/>
+              reduxState.addedEmail ? <EmailAdded/> : <AddToTodo/>
             }
             <CurrentEmail/>
             {/* <EmailAnalytics/> */}
