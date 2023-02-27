@@ -29,7 +29,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    console.log("With hooks")
+    console.log("With hooks 2")
     document.addEventListener('keydown', handleKeyPress);
 
     // remove the event listener
