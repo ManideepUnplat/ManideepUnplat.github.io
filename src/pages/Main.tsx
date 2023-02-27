@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import AddToTodo from '../components/AddToTodo';
 import CurrentEmail from '../components/CurrentEmail'
 import EmailAdded from '../components/EmailAdded';
@@ -21,21 +21,21 @@ function App() {
     }
   },[])
 
+  
+  const handleKeyPress = useCallback((event: { key: any; }) => {
+    console.log(`Key pressed: ${event.key}`);
+  }, []);
 
   useEffect(() => {
-    console.log("Started")
-    const handleKeyDown = (event : any) => {
-      if (event.ctrlKey && event.shiftKey && event.keyCode === 65) {
-        console.log("pressed");
-      }
-    };
+    console.log("With hooks")
+    document.addEventListener('keydown', handleKeyPress);
 
-    document.addEventListener("keydown", handleKeyDown);
-
+    // remove the event listener
     return () => {
-      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener('keydown', handleKeyPress);
     };
-  }, []);
+  }, [handleKeyPress]);
+
 
 
   return (
