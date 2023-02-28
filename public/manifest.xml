@@ -50,7 +50,7 @@
       <Host xsi:type="MailHost">
         <DesktopFormFactor>
 
-          <!-- <ExtensionPoint xsi:type="FocusedInboxTab">
+          <ExtensionPoint xsi:type="FocusedInboxTab">
             <Label resid="TabLabel" />
             <Icon>
               <bt:Image size="16" resid="Icon.16x16" />
@@ -75,9 +75,9 @@
                 <Rule xsi:type="ItemIs" ItemType="Message" FormType="Compose" />
               </HideOn>
             </TabSettings>
-          </ExtensionPoint> -->
+          </ExtensionPoint>
         
-          <ExtensionPoint xsi:type="MessageComposeCommandSurface">
+          <!-- <ExtensionPoint xsi:type="MessageComposeCommandSurface">
             <OfficeTab id="TabDefault">
               <Group id="msgComposeCmdGroup">
                 <Label resid="CommandsGroup.Label"/>
@@ -98,7 +98,7 @@
                 </Control>
               </Group>
             </OfficeTab>
-          </ExtensionPoint>
+          </ExtensionPoint> -->
 
         </DesktopFormFactor>
       </Host>
